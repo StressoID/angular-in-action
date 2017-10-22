@@ -1,0 +1,9 @@
+<mat-card>
+  <a (click)="toggle()">
+    <ng-content select="[header]"></ng-content>
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </a>
+  <div *ngIf="active">
+    <ng-content select="[content]"></ng-content>
+  </div>
+</mat-card>

@@ -1,0 +1,8 @@
+<mat-form-field>
+  <input [(ngModel)]="inputValue" placeholder="Значение пиши сюда" matInput>
+</mat-form-field>
+
+<div>
+  {{inputValue}}
+</div>
+<button color="primary" mat-raised-button (click)="setValue()">Отправить</button>

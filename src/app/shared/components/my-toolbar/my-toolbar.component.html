@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <span>Первый элемент</span>
+    </button>
+  </mat-menu>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>{{customMenuIcon}}</mat-icon>
+  </button>
+
+  {{customTitle}}
+</mat-toolbar>
