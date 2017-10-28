@@ -1,0 +1,16 @@
+mat-card {
+  width: 600px;
+  margin: auto;
+}
+
+.wrapper {
+  display: flex;
+}
+.flex-container {
+  width: 500px;
+}
+
+a {
+  display: block;
+}
+

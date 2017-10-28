@@ -8,9 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-  public value: string;
-
-  setSomeValue(value) {
-    this.value = value;
-  }
 }

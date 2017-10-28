@@ -1,0 +1,5 @@
+<mat-card>
+  <div *ngFor="let category of categories">
+    <a [routerLink]="['/main/categories', category.id]">{{category.title}}</a>
+  </div>
+</mat-card>

@@ -1,0 +1,9 @@
+.navigation {
+  margin-left: 20px;
+}
+
+a {
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+}

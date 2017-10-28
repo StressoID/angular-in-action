@@ -1,0 +1,26 @@
+<app-my-toolbar
+  [customMenuIcon]="'list'"
+  [customTitle]="'Мой первый тулбар'"></app-my-toolbar>
+
+<mat-card>
+  <div>
+    <div>
+      some input component: <app-some-input [someProp]="value"></app-some-input>
+    </div>
+  </div>
+  <div>
+    <div>
+      output component
+    </div>
+    <app-output (someValue)="setSomeValue($event)"></app-output>
+  </div>
+</mat-card>
+
+<app-expansive-panel>
+  <span header>Кастомный хедер для панели</span>
+  <div content>
+    <mat-icon>keyboard</mat-icon>
+  </div>
+</app-expansive-panel>
+
+<router-outlet></router-outlet>
