@@ -16,7 +16,12 @@ import { SliceTextPipe } from './slice-text.pipe';
     SharedModule,
     CategoriesRoutingModule,
   ],
-  declarations: [CategoriesComponent, DetailCategoryComponent, MySuperDirective, SliceTextPipe],
+  declarations: [
+    CategoriesComponent,
+    DetailCategoryComponent,
+    MySuperDirective,
+    SliceTextPipe,
+  ],
 })
 export class CategoriesModule {
 }

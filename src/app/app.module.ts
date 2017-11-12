@@ -7,19 +7,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LocalStorageService } from './local-storage.service';
+import { TestComponent } from './test/test.component';
+import { MyObservableComponent } from './my-observable/my-observable.component';
+import { MyObservableService } from './my-observable/my-observable.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
+    TestComponent,
+    MyObservableComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,
+    HttpModule,
     AppRoutingModule
   ],
-  providers: [ LocalStorageService ],
-  bootstrap: [AppComponent]
+  providers: [ LocalStorageService, MyObservableService ],
+  bootstrap: [AppComponent],
+  entryComponents: [ TestComponent ]
 })
 export class AppModule { }

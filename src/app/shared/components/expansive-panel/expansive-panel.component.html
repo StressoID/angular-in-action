@@ -5,5 +5,10 @@
   </a>
   <div *ngIf="active">
     <ng-content select="[content]"></ng-content>
+    <button mat-raised-button color="primary" (click)="openModal()">Открыть модалку</button>
+    <button color="primary" mat-mini-fab (click)="add()">
+      <mat-icon>add</mat-icon>
+    </button>
   </div>
+
 </mat-card>
