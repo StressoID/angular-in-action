@@ -6,6 +6,8 @@ import { CategoriesComponent } from './categories.component';
 import { SharedModule } from '../../shared/shared.module';
 import { DetailCategoryComponent } from './detail-category/detail-category.component';
 import { RouterModule } from '@angular/router';
+import { MySuperDirective } from '../my-super.directive';
+import { SliceTextPipe } from './slice-text.pipe';
 
 @NgModule({
   imports: [
@@ -14,7 +16,7 @@ import { RouterModule } from '@angular/router';
     SharedModule,
     CategoriesRoutingModule,
   ],
-  declarations: [CategoriesComponent, DetailCategoryComponent],
+  declarations: [CategoriesComponent, DetailCategoryComponent, MySuperDirective, SliceTextPipe],
 })
 export class CategoriesModule {
 }

@@ -7,6 +7,9 @@ import { SomeInputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { OrdersComponent } from './orders/orders.component';
+import { MainService } from './main.service';
+import { MySuperDirective } from './my-super.directive';
 
 @NgModule({
   imports: [
@@ -19,7 +22,9 @@ import { FormsModule } from '@angular/forms';
     MainComponent,
     SomeInputComponent,
     OutputComponent,
+    OrdersComponent,
   ],
+  providers: [ MainService ]
 })
 export class MainModule {
 }

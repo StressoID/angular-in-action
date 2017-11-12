@@ -1,5 +1,14 @@
 <mat-card>
+
+  <div appMySuper>
+    {{ mainService.testProp }}
+  </div>
+
+  <button mat-raised-button color="primary" (click)="setMyTestProp()">Установить</button>
   <div *ngFor="let category of categories">
-    <a [routerLink]="['/main/categories', category.id]">{{category.title}}</a>
+    <a *ngif="a; else b" [routerLink]="['/main/categories', category.id]">{{category.title | sliceText}}</a>
+    <ng-template #b>
+      <a [routerLink]="['/main/categories', category.id]">{{category.title}}</a>
+    </ng-template>
   </div>
 </mat-card>
