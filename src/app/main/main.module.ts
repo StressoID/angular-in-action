@@ -10,19 +10,20 @@ import { FormsModule } from '@angular/forms';
 import { OrdersComponent } from './orders/orders.component';
 import { MainService } from './main.service';
 import { MySuperDirective } from './my-super.directive';
+import { OrdersModule } from './orders/orders.module';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
     FormsModule,
+    OrdersModule,
     MainRoutingModule,
   ],
   declarations: [
     MainComponent,
     SomeInputComponent,
     OutputComponent,
-    OrdersComponent,
   ],
   providers: [ MainService ]
 })

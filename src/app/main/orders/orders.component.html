@@ -1,4 +1,11 @@
-<p>
-  orders works!
-  {{myTestProp}}
-</p>
+<mat-card>
+  <app-search-input (result)="data = [$event]"></app-search-input>
+  <mat-input-container>
+    <input matInput placeholder="Номер" (change)="setData()" [(ngModel)]="value">
+  </mat-input-container>
+  <ul>
+    <li *ngFor="let el of data">
+      {{el.name}}
+    </li>
+  </ul>
+</mat-card>

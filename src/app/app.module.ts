@@ -11,6 +11,8 @@ import { TestComponent } from './test/test.component';
 import { MyObservableComponent } from './my-observable/my-observable.component';
 import { MyObservableService } from './my-observable/my-observable.service';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpService } from './http.service';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,12 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     SharedModule,
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ LocalStorageService, MyObservableService ],
+  providers: [ LocalStorageService, MyObservableService, HttpService ],
   bootstrap: [AppComponent],
   entryComponents: [ TestComponent ]
 })

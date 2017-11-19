@@ -1,20 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { MainService } from '../main.service';
+import { OrdersService } from './orders.service';
 
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
-  styleUrls: ['./orders.component.css']
+  styleUrls: ['./orders.component.css'],
 })
 export class OrdersComponent implements OnInit {
 
-  public myTestProp: string;
+  public data: any[] = [];
+  public value: string;
 
-  constructor(private mainService: MainService) {
-    this.myTestProp = this.mainService.testProp;
-  }
+  constructor(private orders: OrdersService) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  public setData() {
+    this.orders.getOrderById(this.value).subscribe(result => {
+      this.data = [result];
+    });
   }
 
 }
