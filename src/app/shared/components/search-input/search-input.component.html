@@ -1,0 +1,8 @@
+<mat-input-container>
+  <input
+    #searchInput="ngModel"
+    [(ngModel)]="value"
+    (ngModelChange)="searchName()"
+    matInput
+    placeholder="Введите имя">
+</mat-input-container>
