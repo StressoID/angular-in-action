@@ -6,27 +6,31 @@ import { ExpansivePanelComponent } from './components/expansive-panel/expansive-
 import { NavigationComponent } from './components/my-toolbar/navigation/navigation.component';
 import { RouterModule } from '@angular/router';
 import { SearchInputComponent } from './components/search-input/search-input.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchReactInputComponent } from './components/search-react-input/search-react-input.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
+    ReactiveFormsModule,
     MatModule
   ],
   declarations: [
     MyToolbarComponent,
     ExpansivePanelComponent,
     NavigationComponent,
-    SearchInputComponent
+    SearchInputComponent,
+    SearchReactInputComponent
   ],
   exports: [
     MatModule,
     MyToolbarComponent,
     ExpansivePanelComponent,
     NavigationComponent,
-    SearchInputComponent
+    SearchInputComponent,
+    SearchReactInputComponent
   ]
 })
 export class SharedModule { }

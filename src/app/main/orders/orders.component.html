@@ -1,5 +1,7 @@
 <mat-card>
   <app-search-input (result)="data = [$event]"></app-search-input>
+  <app-search-react-input (result)="data = [$event]"></app-search-react-input>
+
   <mat-input-container>
     <input matInput placeholder="Номер" (change)="setData()" [(ngModel)]="value">
   </mat-input-container>
@@ -8,4 +10,35 @@
       {{el.name}}
     </li>
   </ul>
+</mat-card>
+
+<mat-card>
+  <form [formGroup]="myForm" (submit)="submit()">
+    <mat-form-field>
+      <input matInput formControlName="password">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="confirmPassword">
+      <mat-error *ngIf="myForm.controls.confirmPassword.hasError('passwordValid')">
+        password not valid
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary">Save</button>
+  </form>
+
+  <form [formGroup]="builderForm" (submit)="submit()">
+    <mat-form-field>
+      <input matInput formControlName="myControl">
+      <mat-error *ngIf="builderForm.controls.myControl.hasError('required')">
+        required
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="mySuperControl">
+      <mat-error *ngIf="builderForm.controls.mySuperControl.hasError('required')">
+        required
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary">Save</button>
+  </form>
 </mat-card>
